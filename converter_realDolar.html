@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Real para Dólar</title>
+</head>
+<body>
+    <h1>Conversor de Real para Dólar</h1>
+
+    <p>Valor em Reais (BRL): <input type="number" id="reais" step="0.01"></p>
+
+    <button onclick="
+    
+    var reais = parseFloat(document.getElementById('reais').value);
+    // Captura o valor em reais com o id 'reais' e o converte para um número decimal usando parseFloat
+   
+    var taxaDeCambio = 0.20;
+    // Define a taxa fixa de 1 real para 0.2 dólares
+    
+    var dolares = reais * taxaDeCambio;
+    // Calcula o valor em dólares, multiplicando pela taxa
+   
+    document.getElementById('resultado').innerText = 'Valor em Dólares (USD):' +
+    dolares.toFixed(2);
+    // Exibe o resultado. O método 'toFixed(2)' arredonda o valor para duas casas decimais e 'innerText' define o texto do elemento com o id 'resultado'
+    ">converter</button>
+    <!--O botão executa o JS-->
+
+    <p id="resultado"></p>
+    <!--Parágrafo onde o resultado é exibido. O 'id' permite que o JS de o resultado da operação -->
+</body>
+</html>
